@@ -1,0 +1,55 @@
+%%%%%%%%%%%%Settings%%%%%%%%%%%%%%%%
+\documentclass[english,11pt,twoside,list=totoc]{book}
+\input{packages}
+
+%%%%%%%%%%%%Document%%%%%%%%%%%%%%%%
+\begin{document}	
+	%Cover Page
+\frontmatter
+	\pagenumbering{roman}	
+	\includepdf{cover.pdf} %Add a cover.pdf to the main folder. This pdf should be created based on the University Guidelines for the front cover
+\pagestyle{empty}
+
+	%Front Pages
+	\chapter*{}
+		\input{front/declaration}		
+	\chapter*{}
+		\input{front/quote}
+	\chapter*{Acknowledgements}
+		\addcontentsline{toc}{chapter}{Acknowledgements}	
+	\chapter*{Abstract}
+		\input{front/abstracten}
+		\addcontentsline{toc}{chapter}{Abstract}		
+	\chapter*{Zusammenfassung}
+		\input{front/abstractde}
+		\addcontentsline{toc}{chapter}{Zusammenfassung}		
+\pagestyle{fancy}
+
+%%%%%%%Lists and Table of Contents%%%%%%		
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	\chapter*{List of Abbreviations}
+		\input{front/listofabbreviations}
+	\addcontentsline{toc}{chapter}{List of Abbreviations}
+	
+	
+\mainmatter	
+	\chapter{General Introduction}
+		\input{chapters/chapter1}	
+	\chapter{Chapter title} %Replace with the name of your chapter
+		\input{chapters/chapter2}	
+	\chapter{Chapter title} %Replace with the name of your chapter
+		\input{chapters/chapter3}	
+	\chapter{Chapter title} %Replace with the name of your chapter
+		\input{chapters/chapter4}	
+	\chapter{Chapter title} %Replace with the name of your chapter
+		\input{chapters/chapter5}	
+	\chapter{Chapter title} %Replace with the name of your chapter
+		\input{chapters/chapter6}
+	\chapter{Materials and Methods}
+		\input{chapters/chapter7}
+	\input{chapters/Annex}	
+		
+	
+\end{document}

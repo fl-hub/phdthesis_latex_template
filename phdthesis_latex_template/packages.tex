@@ -1,0 +1,94 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage[cyr]{aeguill}
+\usepackage{charter}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{lastpage}
+\usepackage{pdflscape} %allows for page in landscape mode
+\usepackage{csvsimple}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{siunitx}
+\usepackage{makecell}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb} % to get the per square command
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}} %to center table text
+\setlength{\arrayrulewidth}{0.5mm} %Table border thickness
+\usepackage{acronym}
+\usepackage{indentfirst}
+\usepackage{titlesec}
+\graphicspath{{figures/}}
+\usepackage[labelfont=bf]{caption}
+%Table of Contents
+\addto\captionsenglish{\renewcommand\contentsname{Table of Contents}}
+%Bibliography	
+\usepackage{csquotes}
+\usepackage[backend=biber, style=chem-angew, refsection=chapter, sorting=none]{biblatex}
+\addbibresource{reflib.bib}
+\defbibheading{bibliography}[\bibname]{%
+	\section{#1}%
+}
+
+%Pagelayout, Header and Footer
+\usepackage[a4paper,width=155mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\renewcommand{\baselinestretch}{1.5} 
+\usepackage{fancyhdr}
+\setlength{\headheight}{13.6pt} % set this to 13.6pt or slightly larger to be safe
+\pagestyle{fancyplain}
+\fancyhf{}
+\fancyhead[LE,RO]{\leftmark}
+\renewcommand{\headrulewidth}{.4pt}
+\fancyfoot{}
+\fancyfoot[LE,RO]{\thepage}
+\renewcommand{\footrulewidth}{.4pt}
+% Redefine the plain page style
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{.4pt}
+	\fancyfoot{}
+	\fancyfoot[LE,RO]{\thepage}
+	\renewcommand{\footrulewidth}{.4pt}
+}
+%Textlayout
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+%package to allow comments/notes by you and other people
+%\usepackage[multiuser,marginclue,nomargin,inline,index]{fixme}
+%\definecolor{ttwgreen}{RGB}{75,135,73}
+%\fxusetheme{colorsig}
+%\FXRegisterAuthor{tm}{atm}{\color{red}TM}
+%\FXRegisterAuthor{ttw}{attw}{\color{ttwgreen}TTW} % creates ttwnote, ttwwarning, ttwerror, ttwfatal commands
+%\FXRegisterAuthor{mk}{amk}{\color{blue}MK}
